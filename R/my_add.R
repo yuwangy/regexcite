@@ -3,7 +3,7 @@
 
 my_add <- function(x,y = 10){
   if (is.numeric(x) && is.numeric(y)){
-    return(x + y)
+    sum(x, y)
   } else {
     stop("One of your inputs contains a string value")
   }
