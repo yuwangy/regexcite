@@ -1,13 +1,17 @@
 
 #y <- 10
 
-my_add <- function(x,y = 10){
-  if (!is.numeric(x) || !is.numeric(y)){
+
+my_add <- function(x,y = 10) {
+  if (any(is.na(c(x,y)))) {
+    return(NA)
+  } else if (!is.numeric(x) || !is.numeric(y))  {
     stop("One of your inputs contains a string value")
   } else {
-    sum(c(x,y), na.rm = TRUE)
+    return(sum(c(x,y)))
   }
 }
+
 
 my_add(5,10)
 my_add(-3,39)
