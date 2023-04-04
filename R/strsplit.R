@@ -1,4 +1,4 @@
-x <- "alf,bravo,charlie,delta"
+x <- "alf,brav,charlie,delta"
 strsplit(x, split = ",")
 
 strsplit1 <- function(x, split) {
